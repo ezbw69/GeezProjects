@@ -18,6 +18,10 @@
       "description": "Buat Bot di t.me/botfather Masukan BOT tokennya disini",
       "required": false
     },
+    "BOT_USERNAME": {
+      "description": "Buat Bot di t.me/botfather Masukan BOT usernamenya disini",
+      "required": false
+    },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di Grup » https://t.me/GeezSupport » Lalu ketik /get string",
       "required": true
