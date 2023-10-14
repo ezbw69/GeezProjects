@@ -24,11 +24,11 @@ try:
     ).json()
     if user.id in blacklistgeez:
         LOGS.warning(
-            "NAMPAKNYA geezproject TIDAK DAPAT BEKERJA, MUNGKIN ANDA TELAH DI BLACKLIST OLEH PEMILIK geezproject.\nCredits: @VckyouuBitch"        )
+            "NAMPAKNYA 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 TIDAK DAPAT BEKERJA, MUNGKIN ANDA TELAH DI BLACKLIST OLEH PEMILIK 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥."        )
         sys.exit(1)
     if 874946835 not in DEVS:
         LOGS.warning(
-            f"EOL\nGeezProjects v{BOT_VER}, Copyright © 2021-2022 VICKY <https://github.com/vckyou>"
+            f"EOL\𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 v{BOT_VER}."
         )
         sys.exit(1)
 except Exception as e:
@@ -39,8 +39,8 @@ for module_name in ALL_MODULES:
     imported_module = import_module("geezproject.modules." + module_name)
 
 LOGS.info(f"Total Clients = {total} User")
-LOGS.info(f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/GeezSupport")
-LOGS.info(f"💢 Geez - Projects Berhasil Diaktfikan 💢")
+LOGS.info(f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/worstpartyinc")
+LOGS.info(f"🕷 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Berhasil Diaktfikan 🕷")
 
 
 LOOP.run_until_complete(geez_userbot_on())
