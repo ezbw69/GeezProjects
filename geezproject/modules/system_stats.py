@@ -171,20 +171,18 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃[⚡ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚡](https://github.com/vckyou/GeezProjects)\n"
+        f"┃[🕷𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷](https://github.com/ezbw69/GeezProjects)\n"
         f"╰═─────╼══⌘══╾─────═ \n"
-        f" {alive_text} \n"
+        f" 𝗛𝗘𝗥𝗢 disini, bot segala shortcut \n"
         f" ─────────────────── \n"
         f" ❍ `Name      :` [{user.first_name}](tg://user?id={user.id}) \n"
         f" ❍ `Telethon  :` {version.__version__} \n"
         f" ❍ `Python    :` {python_version()} \n"
         f" ❍ `Pytgcalls :` {pytgcalls.__version__} \n"
         f" ❍ `Bot Ver   :` {BOT_VER} \n"
-        f" ❍ `Modules   :` {len(modules)} Modules \n"
-        f"╭═───────╼⌘╾───────═ \n"
+        f" ❍ `Modules   :` {len(modules)} Modules \n\n"
         f"┃[𝗚𝗿𝗼𝘂𝗽](https://t.me/{GROUP})  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{CHANNEL})  |  "
-        f"[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})\n"
-        f"╰═──────╼═⌘═╾───────═")
+        f"[𝗢𝘄𝗻𝗲𝗿](https://t.me/hero4in)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
