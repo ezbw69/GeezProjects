@@ -161,8 +161,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "GeezSupport")
-CHANNEL = os.environ.get("CHANNEL", "GeezProject")
+GROUP = os.environ.get("GROUP", "worstpartyinc")
+CHANNEL = os.environ.get("CHANNEL", "hero4in")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -237,20 +237,20 @@ BOT_VER = os.environ.get("BOT_VER", "1.0.5")
 
 # Default .alive logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/8e256cb133087b060e288.png"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/7fb86115e186a19fdeba1.jpg"
 )
 
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/02b3dbeb4df30582f0d66.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/7fb86115e186a19fdeba1.jpg"
 )
 
 # Picture For VCPLUGIN
 PLAY_PIC = (
-    os.environ.get("PLAY_PIC") or "https://telegra.ph/file/bcb83aaf377737de971d9.png"
+    os.environ.get("PLAY_PIC") or "https://telegra.ph/file/7fb86115e186a19fdeba1.jpg"
 )
 
 QUEUE_PIC = (
-    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/bcb83aaf377737de971d9.png"
+    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/7fb86115e186a19fdeba1.jpg"
 )
 
 DEFAULT = list(map(int, b64decode("NTE1NTE0MDkxNw==").split()))
@@ -392,7 +392,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**GeezProjects v{BOT_VER} is back up and running!**\n\n"
+        f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
     )
@@ -566,26 +566,26 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@GeezSupport"):
-                buttons = paginate_help(0, dugmeler, "helpme")
+            if event.query.user_id == uid and query.startswith("@worstpartyinc"):
+                buttons = paginate_help(0, dugmeler, "hero")
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text=f"**🚫 GeezProjects Inline Menu 🚫**\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n\n◇  **Owner** [{user.first_name}](tg://user?id={user.id})\n◇  **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository GeezProjects Ubot",
-                    url="https://t.me/GeezSupport",
+                    description="Repository 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Ubot",
+                    url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**GeezProjects Ubot**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Vcky](https://t.me/vckyou)\n**Support :** @GeezProject\n❍▸ **Repository :** [GeezProjects](https://github.com/vckyou/GeezProjects)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [Vcky](https://t.me/ezbw69)\n**Support :** @worstpartyinc\n❍▸ **Repository :** [GeezProjects](https://github.com/ezbw69/GeezProjects)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/GeezSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worspartyinc"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/vckyou/GeezProjects"
+                                "ʀᴇᴘᴏ", "https://github.com/ezbw69/GeezProjects"
                             ),
                         ],
                     ],
@@ -625,23 +625,23 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="⚡ GeezProjects ⚡",
-                    description="GeezProjects Ubot | Telethon",
-                    url="https://t.me/GeezSupport",
+                    title="⚡ 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 ⚡",
+                    description="𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 | Telethon",
+                    url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
                     text=f"**GeezProjects**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @GeezProject\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/GeezSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/vckyou/GeezProjects"
+                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/ezbw69/GeezProjects"
                              ),
                         ],
                     ],
                     link_preview=False,
                 )
             await event.answer(
-                [result], switch_pm="👥 geezproject PORTAL", switch_pm_param="start"
+                [result], switch_pm="👥 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 PORTAL", switch_pm_param="start"
             )
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"reopen")))
@@ -649,7 +649,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**GeezProjects Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
+                text = f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n\n☆ **Owner** [{user.first_name}](tg://user?id={user.id})\n☆  **Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
                     file=logogeez,
@@ -657,7 +657,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini geezproject Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -672,7 +672,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"Kamu Tidak diizinkan, ini geezproject Milik {ALIVE_NAME}"
+                    f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {ALIVE_NAME}"
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -681,10 +681,10 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
                 openlagi = custom.Button.inline("• Re-Open Menu •", data="reopen")
                 await event.edit(
-                    "❌ **Help Mode Button Ditutup!** ❌", buttons=openlagi
+                    "● **Help Mode Button Ditutup!** ●", buttons=openlagi
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini geezproject Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -698,7 +698,7 @@ with bot:
                 buttons = paginate_help(current_page_number - 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini geezproject Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ub_modul_(.*)")))
@@ -713,7 +713,7 @@ with bot:
                         .replace("`", "")
                         .replace("**", "")[:150]
                         + "..."
-                        + "\n\nBaca Teks Berikutnya Ketik .help "
+                        + "\n\nBaca Teks Berikutnya Ketik !help "
                         + modul_name
                         + " "
                     )
@@ -730,7 +730,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini geezproject Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
