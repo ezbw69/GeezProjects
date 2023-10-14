@@ -566,12 +566,12 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@worstpartyinc"):
+            if event.query.user_id == uid and query.startswith("@GeezSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
-                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n\n◇  **Owner** [{user.first_name}](tg://user?id={user.id})\n◇  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**🕷 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 🕷**\n\n◇  **Owner** [{user.first_name}](tg://user?id={user.id})\n◇  **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -580,10 +580,10 @@ with bot:
                     description="Repository 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Ubot",
                     url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [hero](https://t.me/ezbw69)\n**Support :** @worstpartyinc\n❍▸ **Repository :** [GeezProjects](https://github.com/ezbw69/GeezProjects)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [hero](https://t.me/hero4in)\n**Support :** @worstpartyinc\n❍▸ **Repository :** [EZBW HERO](https://github.com/ezbw69/GeezProjects)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worspartyinc"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ", "https://github.com/ezbw69/GeezProjects"
                             ),
@@ -623,6 +623,23 @@ with bot:
                     buttons=tl_ib_buttons,
                     link_preview=False,
                 )
+            else:
+                result = builder.article(
+                    title="⚡ 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 ⚡",
+                    description="𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Ubot | Telethon",
+                    url="https://t.me/worstpartyinc",
+                    thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
+                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @worstpartyinc\n➖➖➖➖➖➖➖➖➖➖",
+                    buttons=[
+                        [
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
+                            custom.Button.url(
+                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/ezbw69/GeezProjects"
+                             ),
+                        ],
+                    ],
+                    link_preview=False,
+                )
             await event.answer(
                 [result], switch_pm="👥 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 PORTAL", switch_pm_param="start"
             )
@@ -632,7 +649,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n\n☆ **Owner** [{user.first_name}](tg://user?id={user.id})\n☆  **Jumlah** `{len(dugmeler)}` Module"
+                text = f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Inline Menu**\n\n☆ **Owner** [{user.first_name}](tg://user?id={user.id})\n☆  **Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
                     file=logogeez,
@@ -640,7 +657,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢 Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -655,7 +672,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {ALIVE_NAME}"
+                    f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜 Milik {ALIVE_NAME}"
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -667,7 +684,7 @@ with bot:
                     "● **Help Mode Button Ditutup!** ●", buttons=openlagi
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢 Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -681,7 +698,7 @@ with bot:
                 buttons = paginate_help(current_page_number - 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini geezproject Milik {owner}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ub_modul_(.*)")))
@@ -713,7 +730,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢 Milik {owner}"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
