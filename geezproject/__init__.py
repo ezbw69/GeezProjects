@@ -623,23 +623,6 @@ with bot:
                     buttons=tl_ib_buttons,
                     link_preview=False,
                 )
-            else:
-                result = builder.article(
-                    title="⚡ 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 ⚡",
-                    description="𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 | Telethon",
-                    url="https://t.me/worstpartyinc",
-                    thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @hero4in\n➖➖➖➖➖➖➖➖➖➖",
-                    buttons=[
-                        [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
-                            custom.Button.url(
-                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/ezbw69/GeezProjects"
-                             ),
-                        ],
-                    ],
-                    link_preview=False,
-                )
             await event.answer(
                 [result], switch_pm="👥 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 PORTAL", switch_pm_param="start"
             )
