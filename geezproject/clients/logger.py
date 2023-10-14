@@ -11,9 +11,9 @@ from geezproject.utils import checking
 
 MSG_ON = """
 __⚡ Congratulations ⚡__
-__GeezProhects Has Been Deployed__
+__𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Has Been Deployed__
 ─┄───┅───┄─
-▸ **geezproject Version -** `{}@{}`
+▸ **𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Version -** `{}@{}`
 ▸ **Ketik** `{}ping` **untuk Mengecheck Bot**
 ─┄───┅───┄─
 """
