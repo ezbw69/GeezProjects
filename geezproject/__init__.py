@@ -567,7 +567,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith("@worstpartyinc"):
-                buttons = paginate_help(0, dugmeler, "hero")
+                buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logogeez,
                     link_preview=False,
@@ -629,7 +629,7 @@ with bot:
                     description="𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 | Telethon",
                     url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**GeezProjects**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @GeezProject\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @hero4in\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
@@ -648,7 +648,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
-                buttons = paginate_help(current_page_number, dugmeler, "hero")
+                buttons = paginate_help(current_page_number, dugmeler, "helpme")
                 text = f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n\n☆ **Owner** [{user.first_name}](tg://user?id={user.id})\n☆  **Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
@@ -662,13 +662,13 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(
-                data=re.compile(rb"hero_next\((.+?)\)")
+                data=re.compile(rb"helpme_next\((.+?)\)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(current_page_number + 1, dugmeler, "hero")
+                buttons = paginate_help(current_page_number + 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
@@ -689,13 +689,13 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(
-                data=re.compile(rb"hero_prev\((.+?)\)")
+                data=re.compile(rb"helpme_prev\((.+?)\)")
             )
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(event.data_match.group(1).decode("UTF-8"))
-                buttons = paginate_help(current_page_number - 1, dugmeler, "hero")
+                buttons = paginate_help(current_page_number - 1, dugmeler, "helpme")
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Milik {owner}"
