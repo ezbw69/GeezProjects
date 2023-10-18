@@ -580,7 +580,7 @@ with bot:
                     description="Repository 𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Ubot",
                     url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [hero](https://t.me/hero4in)\n**Support :** @worstpartyinc\n❍▸ **Repository :** [EZBW HERO](https://github.com/ezbw69/GeezProjects)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**ㅤ    𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n✠╼━━━━━━❖━━━━━━━✠\n❍▸ **Owner Repo :** [hero](https://t.me/hero4in)\n**Support :** @worstpartyinc\n❍▸ **Repository :** [EZBW HERO](https://github.com/ezbw69/GeezProjects)\n✠╼━━━━━━❖━━━━━━━✠",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
@@ -629,7 +629,7 @@ with bot:
                     description="𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥 Ubot | Telethon",
                     url="https://t.me/worstpartyinc",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @worstpartyinc\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**ㅤ    𝗛𝗘𝗥𝗢𝗜𝗡𝗙𝗔𝗧𝗛𝗘𝗥🕷**\n✠╼━━━━━━❖━━━━━━━✠\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n✠╼━━━━━━❖━━━━━━━✠\n**Support:** @worstpartyinc",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/worstpartyinc"),
